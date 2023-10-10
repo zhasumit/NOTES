@@ -1,6 +1,8 @@
 <!-- Basic format symantics -->
 Normal text, no extra magic 
 
+using `#` for heading
+
 # Heading 1 
 ## Heading 2 
 ### Heading 3 
@@ -8,14 +10,38 @@ Normal text, no extra magic
 ##### Heading 5 
 ###### Heading 6 
 
-_Italics using underscore before and trailing part_
+`---, ___and ***` is used for a horizonaal line like hr tag 
+___
 
-**Strong/Bold - using two stars** 
+Italics : 
 
-~~Tilde used for strikeThrough~~
+*SINGLE Star wrap*
+
+_SINGLE underScore wrap_
 
 
-`--- and ***` is used for a horizonaal line like hr tag 
+___
+
+Bold : 
+
+**TWO STARS**
+ 
+__TWO underScores__ 
+
+___
+
+Strikethrough : 
+~~DOUBLE Tilde Wrapping~~
+
+
+
+
+
+---
+
+
+`\` is used for Nullifying the effects of `*  _`
+escape sequence roles
 
 ---
 
@@ -31,6 +57,32 @@ var name = "Sumit-Zha"
 console.log(name)
 ```
 
+Writing name of language after TRIPLE tilde gives a color format and all the specifics to the code written
+
+```bash
+npm init
+npm install 
+```
+
+```javascript
+function add(a,b){
+   return a+b;
+}
+```
+
+```cpp
+void swap(int &a, int &b){
+   int temp = a;
+   a = b; 
+   b = temp;
+}
+```
+
+
+```python 
+def add(a,b)
+   return a+b
+```
 ---
 
 
@@ -55,11 +107,20 @@ indentation makes the nesting in list
 even if we donot maintain the order it is maintained in preview 
 
 Unordered List : 
-using dash makes the unordered list  
+using dash or star * makes the unordered list  
 - one 
 - Two 
 - Three
 
+
+<!-- using stars -->
+* I 
+* II
+* III
+  * III. I
+  * III. II
+  * III. III
+  * III. IV
 ---
 
 
@@ -123,3 +184,22 @@ Tables : Use pipe sign to start and end the table, First line of table is taken 
 
 
 ***
+
+Task Boxes 
+`[ ]` is used to create a task box
+- [x] Go for a walk 
+- [x] discuss Code 
+- [x] Take Pictures of sunrise 
+- [ ] Eat breakfast 
+- [x] Go for a test 
+- [ ] Take a bath 
+- [ ] CODE Js
+- [ ] BrushUp DSA
+- [x] Give contest 
+- [ ] coffee break
+- [ ] Mini / Major project
+- [ ] pet project
+- [ ] brushUp developement 
+
+
+---
