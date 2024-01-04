@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chilling with music</title>
+</head>
+
+<body>
+
+    <!-- Mostly attributes are boolean either give it or not give it eg: controls-->
+    <!--  muted -> muted originally -->
+    <!--  autoplay-> autoplay  originally -->
+
+    <div>
+        Audio 1 : Wanna catch another place ...
+        <audio src="../Music/catchnotherPlace.mp3" autoplay controls>
+    </div>
+    <br>
+
+    <!-- We can also have sources and multiple sources int he source section -->
+    <div>
+        Audio 2 : Tomato <audio muted controls>
+            <source src="../Music/Tomato.mp3">
+            <source src="../Music/Tomato.wav">
+            <p>This Browser doesnot support HTML5</p>
+            <!-- For multiple support systems  -->
+        </audio>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushing buttons</title>
+</head>
+
+<body>
+    <!-- Button with link -->
+    <a href="https://www.google.com/" target="_self" title="Takes you to google">
+        <button
+            style="background-color: #333333; height: 40px; width: 400px; color:#00FF00; border-radius: 5px; font-size: larger;">
+            Click me
+        </button>
+    </a>
+
+    <a href="https://www.google.com/" target="_blank" title="Takes you to google">
+        <button disabled> Click me</button>
+    </a>
+    <br> <br>
+    <!-- Button WITHOUT link -->
+    <button
+        style="background-color: #333333; height: 40px; width: 150px; color:rgb(221, 187, 253); border-radius: 5px; font-size: larger;"
+        onclick="doSomething()">
+
+        Click me
+    </button>
+
+    <p id="test"> !!! HELLO !!! </p>
+
+    <!-- Writing some fucntionality : javascript -->
+    <script>
+        function doSomething() {
+            document.getElementById("test").innerHTML = "Good Bye 👋"
+        }
+    </script>
+
+
+</body>
+
+</html>

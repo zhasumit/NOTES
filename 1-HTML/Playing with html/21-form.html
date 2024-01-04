@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filling Forms is no fun</title>
+</head>
+
+<body>
+
+    <!-- get -> insecure, POST -> donot apphend data to url -->
+    <form action="action_page.php" method="post">
+
+        <!-- Label is used to give info about filling -->
+        <div>
+            <label for="firstName">First Name : </label>
+            <!-- for and id value join the label and input -->
+            <!-- input has a name to signify the vlaue for server -->
+            <!-- required -> used for some important not-leavable info -->
+            <input type="text" id="firstName" name="fName" placeholder="Alex" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="lastName">Last Name : </label>
+            <input type="text" id="lasttName" name="lName" placeholder="Hills ">
+        </div>
+        <br>
+
+
+        <!-- maxlength is used for setting length of the password -->
+        <div>
+            <label for="pass">password : </label>
+            <input type="password" id="pass" name="password" maxlength="12" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="mail">Mail : </label>
+            <input type="email" id="mail" name="Email" required placeholder="abc@xyz.com">
+        </div>
+        <br>
+
+        <div>
+            <label for="phone">Phone# : </label>
+            <input type="tel" id="phone" name="telNum" placeholder="(Code)-1234-567-890">
+        </div>
+        <br>
+
+        <div>
+            <label for="bday">Birthday : </label>
+            <input type="date" id="bday" name="bday" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="Quantity">Quantity : </label>
+            <input type="number" id="Quantity" name="qty" min="0" value="1" max="99">
+        </div>
+        <br>
+
+        <!-- Radio options designations -->
+        <div>
+            <label for="title">Title : </label>
+
+            <label for="Mr.">Mr. </label>
+            <input type="radio" id="Mr." name="title" value="Mr.">
+
+            <label for="Mrs.">Mrs. </label>
+            <input type="radio" id="Mrs." name="title" value="Mrs.">
+
+            <label for="PhD.">PhD. </label>
+            <input type="radio" id="PhD." name="title" value="PhD.">
+        </div>
+        <br>
+
+        <!-- Drop down menu -->
+        <div>
+            <label for="payment">Payement : </label>
+            <select name="payment" id="payement">
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="giftCard">giftCard</option>
+                <option value="RupayCard">RupayCard</option>
+            </select>
+        </div>
+        <br>
+
+
+        <div>
+            <label for="updates">Updates? : </label>
+            <input type="checkbox" id="updates" name=updates>
+        </div>
+        <br>
+
+        <div>
+            <input type="submit">
+        </div>
+        <br>
+
+        <div>
+            <input type="reset">
+        </div>
+        <br>
+
+
+
+
+
+
+
+
+
+    </form>
+
+
+
+
+
+</body>
+
+</html>

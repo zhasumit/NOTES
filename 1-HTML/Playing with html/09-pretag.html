@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        <code>
+            void selectionSort(int arr[], int size)
+            {
+                for (int i = 0; i < size - 1; i++)
+                {
+                    int minIndex = i;
+                    // find the minimum
+                    for (int j = i + 1; j < size; j++)
+                        if (arr[j] < arr[minIndex])
+                            minIndex = j;
+
+                    // swap the elements minimum <-> ith index
+                    int temp = arr[minIndex];
+                    arr[minIndex] = arr[i];
+                    arr[i] = temp;
+                }
+                // finall smallest elment gets to first index
+                // find the smallest for i+1 now
+            }
+        </code>
+
+        
+
+    </pre>
+</body>
+
+</html>
