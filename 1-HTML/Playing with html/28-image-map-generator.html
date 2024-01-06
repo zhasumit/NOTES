@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map generator</title>
+    <style>
+        body {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../Images/cards.jpg" usemap="#image-map">
+
+    <map name="image-map">
+        <area onclick="Spade()" target="" alt="club" title="club" href="" coords="221,256,64,15" shape="rect">
+        <area onclick="Diamond()" target="" alt="" title="" href="" coords="341,18,499,255" shape="rect">
+        <area onclick="Hearts()" target="" alt="" title="" href="" coords="64,309,223,545" shape="rect">
+        <area onclick="clubs()" target="" alt="" title="" href="" coords="339,312,497,545" shape="rect">
+    </map>
+
+    <script>
+        function clubs() {
+            alert("clicked CLUBS");
+        }
+        function Hearts() {
+            alert("clicked HEARTS");
+        }
+        function Spade() {
+            alert("clicked SPADES");
+        }
+        function Diamond() {
+            alert("clicked DIAMOND");
+        }
+    </script>
+</body>
+
+</html>
