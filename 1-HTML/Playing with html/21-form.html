@@ -39,7 +39,8 @@
 
         <div>
             <label for="mail">Mail : </label>
-            <input type="email" id="mail" name="Email" required placeholder="abc@xyz.com">
+            <!-- autofocus => default focus onto the input and is taken as default -->
+            <input type="email" id="mail" name="Email" required placeholder="abc@xyz.com" autofocus>
         </div>
         <br>
 
@@ -80,10 +81,21 @@
         <div>
             <label for="payment">Payement : </label>
             <select name="payment" id="payement">
-                <option value="Visa">Visa</option>
-                <option value="MasterCard">MasterCard</option>
-                <option value="giftCard">giftCard</option>
-                <option value="RupayCard">RupayCard</option>
+                <!-- Optgroup is for labelling the menu (seperation of methods) -->
+                <optgroup label="Card">
+                    <option value="Visa">Visa</option>
+                    <option value="MasterCard">MasterCard</option>
+                    <option value="Discover">Discover</option>
+                    <option value="giftCard">giftCard</option>
+                    <option value="RupayCard">RupayCard</option>
+                </optgroup>
+                <optgroup label="UPI">
+                    <option value="Paytm">Paytm</option>
+                    <option value="BhimUPI">BhimUPI</option>
+                    <option value="Gpay">Gpay</option>
+                    <option value="phonePay">phonePay</option>
+                    <option value="Cred">Cred</option>
+                </optgroup>
             </select>
         </div>
         <br>
@@ -91,14 +103,14 @@
         <!-- slecting using data list -->
         <div>
             <label for="editors">editors : </label>
-            <input list="editors" name="editor">
-            <datalist id="editors">
-                <option value="vscode">Vs Code</option>
-                <option value="sublime">Sublime text</option>
-                <option value="vim">Vim</option>
-                <option value="atom">Atom</option>
-                <option value="netbeans">Netbeans</option>
-                <option value="espresso">Espresso</option>
+            <input id="editors" list="editors-list" name="editor">
+            <datalist id="editors-list">
+                <option value="vscode">
+                <option value="sublime">
+                <option value="vim">
+                <option value="atom">
+                <option value="netbeans">
+                <option value="espresso">
             </datalist>
         </div>
         <br>
