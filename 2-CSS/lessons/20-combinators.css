@@ -1,0 +1,28 @@
+/* child combinator  */
+
+div>p {
+    /* alters only the paragraph tag */
+    color: rgb(255, 174, 0);
+    font-size: 30px;
+}
+
+
+
+/* decendant combinator  */
+
+li li {
+    /* alters ALLL the tags (decendants) in li */
+    background-color: rgb(249, 104, 249);
+}
+
+
+/* adjacent sibling selector  */
+/* siblings -> pas pas me jo h  */
+h1 + p{
+    background-color: beige;
+}
+
+/* general siblings  => all siblings of a type*/
+h2~p{
+    color: red;
+}

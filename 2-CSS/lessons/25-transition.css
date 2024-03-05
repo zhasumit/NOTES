@@ -1,0 +1,32 @@
+body {
+    background-color: #222222;
+    margin: 0;
+    padding: 0;
+}
+
+
+.box {
+    background-color: red;
+    border: 2px white solid;
+    margin: 0;
+    margin: 2vmax;
+    height: 100px;
+    width: 100px;
+    color: greenyellow;
+
+    padding: auto;
+
+    /* property name time easein easeout */
+    /* all for all the properties */
+    transition: all .5s;
+}
+
+.box:hover {
+    background-color: tomato;
+    width: 70%;
+
+    transform: skewX(-30deg);
+    transform: skewy(-30deg);
+
+    transform: translate(100px, -100px);
+}

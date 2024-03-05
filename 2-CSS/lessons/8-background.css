@@ -1,0 +1,26 @@
+h1 {
+    background: linear-gradient(to top, goldenrod, white);
+    background-repeat: no-repeat;
+}
+
+#p1 {
+    /* linear gradient puts two colors in charge (to left, to right, to bottom) are used for flow of colors */
+    background: linear-gradient(to left, skyblue, lightgreen);
+    background-repeat: no-repeat;
+    /* attachment fixed makes the background cover entire stretch */
+    background-attachment: fixed;
+}
+
+#p2 {
+    background: linear-gradient(to right, skyblue, white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    background-image: url('Images/What\ to\ do.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}

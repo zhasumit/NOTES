@@ -1,0 +1,27 @@
+/* importing the fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+body {
+    background-color: #222222;
+}
+
+h1 {
+    color: whitesmoke;
+    font-family: 'Press Start 2P', "consolas", sans-serif;
+}
+
+p {
+    color: #00ff73;
+    /* list more than one for next best choice : contengencies */
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: cyan dotted underline;
+    font-size: 18px;
+    text-transform: capitalize;
+    text-indent: 20%;
+    line-height: 40px;
+    word-spacing: 15px;
+    letter-spacing: 4px;
+}

@@ -1,0 +1,17 @@
+a[href="https://www.facebook.com/"]{
+    font-size: 100px;
+    color: blue;
+}
+a[href="https://www.youtube.com/"]{
+    font-size: 70px;
+    color: red;
+}
+a[href="https://www.google.com/"]{
+    font-size: 200px;
+    color: greenyellow;
+}
+a[href="https://www.instagram.com/"]{
+    font-size: 150px;
+    color: rgba(253, 40, 68, 0.729);
+}
+

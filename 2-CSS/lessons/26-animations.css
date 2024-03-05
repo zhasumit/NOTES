@@ -1,0 +1,60 @@
+body {
+    background-color: #222222;  
+    margin: 0;
+    padding: 0;
+}
+
+
+.box {
+    background-color: red;
+    border: 2px white solid;
+    margin: 0;
+    margin: 2vmax;
+    height: 100px;
+    width: 100px;
+    color: greenyellow;
+
+    padding: auto;
+
+    /* property name time easein easeout */
+    /* all for all the properties */
+    transition: all 5 s;
+}
+
+.box{
+        /* animation-name: sumitsanimation;
+        animation-duration: .5 s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards; /* goes to to part*/
+        /* animation-iteration-count: 10; */ 
+ 
+        /* animation: sumitsanimation 1s linear 1s infinite alternate; */
+        animation: sumitAnimation1 5s linear 1s infinite alternate;
+    }
+
+
+@keyframes sumitsanimation{
+    from{
+        background-color: rgb(255, 162, 162);
+    }
+    to{
+        background-color: forestgreen;
+    }
+}
+
+
+@keyframes sumitAnimation1 {
+    0%{
+        background-color: rgba(34, 139, 34, 0.884);
+        transform: scale(.5);
+    }
+    50%{
+        border-radius: 100%;
+        border: 2px solid black;
+    }
+    100%{
+        background-color: rgba(255, 0, 0, 0.492);
+        transform: scale(30);
+    }
+    
+}

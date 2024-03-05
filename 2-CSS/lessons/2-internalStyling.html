@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Following style</title>
+
+
+    <!-- internal styling is done in the header of the page -->
+    <style>
+        /* tags are directly written as tag name and braces contains styles */
+        /* They are less redundant */
+        body {
+            background-color: #222222;
+            /* replacement for attribute : style="background-color: #222222;" */
+        }
+
+
+        h1 {
+            color: whitesmoke
+        }
+
+        p {
+            background-color: green;
+            color: whitesmoke;
+        }
+
+
+        /* The closer the styling to the tags the powerful it is  */
+
+        /* inline(attribute) >> style tag (internal) >> .css file external(style link) */
+    </style>
+
+
+
+</head>
+
+
+<!-- Using internal styling -->
+
+
+<body>
+
+    <!-- Three ways to add css to the file
+        inline 
+        internal
+        external ; works the BEST
+    -->
+
+
+    <h1>This is my website </h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatum, consectetur
+        obcaecati accusamus earum in
+        rerum perferendis culpa. Voluptatem, nisi. Molestiae impedit odit ullam non illum pariatur magni fugit qui,
+        facilis debitis ab doloremque sequi omnis repellendus magnam incidunt. Voluptatem exercitationem eum iste nobis
+        at eius labore cupiditate quis nam sapiente!
+    </p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing
+        elit.
+        Voluptatum, consectetur obcaecati accusamus earum in
+        rerum perferendis culpa. Voluptatem, nisi. Molestiae impedit odit ullam non illum pariatur magni fugit qui,
+        facilis debitis ab doloremque sequi omnis repellendus magnam incidunt. Voluptatem exercitationem eum iste
+        nobis
+        at eius labore cupiditate quis nam sapiente!
+    </p>
+
+    <p style=" background-color: moccasin; color: maroon;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatum, consectetur obcaecati accusamus earum in
+        rerum perferendis culpa. Voluptatem, nisi. Molestiae impedit odit ullam non illum pariatur magni fugit qui,
+        facilis debitis ab doloremque sequi omnis repellendus magnam incidunt. Voluptatem exercitationem eum iste
+        nobis
+        at eius labore cupiditate quis nam sapiente!
+    </p>
+
+
+</body>
+
+
+
+
+
+</html>

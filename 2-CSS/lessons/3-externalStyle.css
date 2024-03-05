@@ -1,0 +1,29 @@
+ /* external styling is stylesheet .css file */
+ /* This file is linked to the html */
+ /* used for large documents -> keep track of things */
+
+ /* inline(attribute) >> style tag (internal) >> .css file external(style link) */
+ /* The closer the styling to the tags the powerful it is  */
+
+ body {
+     background-color: #222222;
+     /* replacement for attribute : style="background-color: #222222;" */
+     /* also replacement for the style tag */
+ }
+
+ h1 {
+     color: whitesmoke
+ }
+
+ p {
+     background-color: green;
+     color: whitesmoke;
+ }
+
+
+ /* This page could be used for many documents  */
+
+ /* select the entirity of all the page */
+ *{
+    background-color: crimson;
+ }

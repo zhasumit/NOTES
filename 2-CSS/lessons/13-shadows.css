@@ -1,0 +1,40 @@
+body {
+    padding: 15px;
+}
+
+h1 {
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* text-shadow: x-axis y-axis spread color */
+#s1 {
+    /* shadow property */
+    text-shadow: 5px 0px 0px red;
+}
+
+#s2 {
+    text-shadow: 0px 5px 0px orange;
+}
+
+#s3 {
+    text-shadow: 0px 0px 5px green;
+}
+
+#s4 {
+    text-shadow: 5px 5px 6px magenta;
+}
+
+/* multiple shadows could be given by a comma */
+#s5 {
+    text-shadow: 10px 10px 8px coral, -10px -15px 5px blue;
+}
+
+
+h1:hover {
+    /* if you hover put a box shadow */
+    box-shadow: 15px 15px 15px pink;
+    /* works on the same principle x, y, spread, color */
+}

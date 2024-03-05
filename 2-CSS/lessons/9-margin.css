@@ -1,0 +1,42 @@
+body {
+    border: 5px solid;
+}
+
+/* margin is space around an element*/
+/* padding is the space between the contents of the divs and border */
+
+#box1 {
+    border: 5px solid magenta;
+    width: 250px;
+    height: 250px;
+    background-color: aquamarine;
+    font-size: larger;
+    padding: 20px;
+
+    /* margins */
+    /* margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px; 
+    The individual sides of the margins could be controlled 
+    or we can simply write it in one line 
+    */
+    margin: 50px;
+    /* we can also mention the percentage of margin such that the  it takes proportional margins*/
+
+    /* margin: 20%; */
+}
+
+#box2 {
+    border: 5px solid forestgreen;
+    width: 250px;
+    height: 250px;
+    background-color: gold;
+    font-size: large;
+    padding: 5px;
+
+    /* sticking the element to the sides is taken care by (auto ) */
+    /* if you stick to both left and right of the screen ->it centers the div box */
+    margin-left: auto;
+    margin-right: auto;
+}

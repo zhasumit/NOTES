@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* nowrap -> makes the element compress around in the same line */
+    /* wrap -> makes the elements to adjust and become responsive accordingly*/
+    background-color: #444444;
+    /* arrange elements coloum-wise */
+    /* flex-direction: column; */
+    /* coloum-reverse -> elements act as the stack -> reverse order */
+    /* width: 120px; */
+
+    /* justify-content: center; */
+    /* it can be flex-start and flex-end and space-around(between the lines)*/
+
+    height: 400px;
+    /* align-items: flex-start;
+    align-items: flex-end; */
+
+    /* put elements at center */
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.container div {
+    color: white;
+    height: 100px;
+    width: 100px;
+    background-color: #999999;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    margin: 5px;
+}

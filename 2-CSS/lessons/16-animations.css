@@ -1,0 +1,179 @@
+#box1 {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    font-size: 85px;
+    text-align: center;
+
+    /*
+    animation: mySlides;
+    /* gives state of animation */
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    /* ease in -> accelates */
+    /* ease out -> decclerates */
+    /* linear -> constant*/
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+    animation: 5s linear 0s infinite running myRotateX;
+}
+
+#box2 {
+    height: 100px;
+    width: 100px;
+    background-color: skyblue;
+    font-size: 85px;
+    text-align: center;
+    animation: 5s linear 0s infinite running myRotateY;
+}
+
+#box3 {
+    height: 100px;
+    width: 100px;
+    background-color: tomato;
+    font-size: 85px;
+    text-align: center;
+    animation: 5s linear 0s infinite running myRotateZ;
+}
+
+#box4 {
+    height: 100px;
+    width: 100px;
+    background-color: silver;
+    font-size: 85px;
+    text-align: center;
+    animation: 5s linear 0s infinite running mySlides;
+}
+
+#box5 {
+    height: 100px;
+    width: 100px;
+    background-color: royalblue;
+    font-size: 85px;
+    text-align: center;
+    animation: 5s linear 0s infinite running myOpacity;
+}
+
+#box6 {
+    height: 100px;
+    width: 100px;
+    background-color: hotpink;
+    font-size: 85px;
+    text-align: center;
+    animation: 5s linear 0s infinite running myScale;
+}
+
+#box7 {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    font-size: 85px;
+    text-align: center;
+    animation: 5s linear 0s infinite running myColor;
+}
+
+#box1:hover {
+    /* combining all the 6 animation in one  */
+    animation: 5s linear 0s infinite running mySlides;
+}
+
+#box2:hover {
+    /* combining all the 6 animation in one  */
+    animation: 5s linear 0s infinite running mySlides;
+}
+
+#box3:hover {
+    /* combining all the 6 animation in one  */
+    animation: 5s linear 0s infinite running mySlides;
+}
+
+#box4:hover {
+    /* combining all the 6 animation in one  */
+    animation: 5s linear 0s infinite running myRotateZ;
+}
+
+#box5:hover {
+    /* combining all the 6 animation in one  */
+    animation: 5s linear 0s infinite running myRotateZ;
+}
+
+#box6:hover {
+    /* combining all the 6 animation in one  */
+    animation: 5s linear 0s infinite running myRotateY;
+}
+
+#box7:hover {
+    /* combining all the 6 animation in one  */
+    animation: 5s linear 0s infinite running myRotateX;
+}
+
+
+/* defining animations */
+@keyframes mySlides {
+
+    /* start point */
+    from {
+        margin-left: 0%;
+    }
+
+    /* end point */
+    to {
+        margin-left: 100%;
+    }
+}
+
+
+/* animation 2 */
+@keyframes myRotateX {
+    100% {
+        transform: rotateX(360deg)
+    }
+}
+
+@keyframes myRotateY {
+    100% {
+        transform: rotateY(360deg)
+    }
+}
+
+@keyframes myRotateZ {
+    100% {
+        transform: rotateZ(360deg)
+    }
+}
+
+@keyframes myOpacity {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes myScale {
+    50% {
+        transform: scale(0.5, 0.5);
+    }
+}
+
+
+@keyframes myColor {
+    20% {
+        background-color: orange;
+    }
+
+    40% {
+        background-color: yellow;
+    }
+
+    60% {
+        background-color: yellowgreen;
+    }
+
+    80% {
+        background-color: lightgreen;
+    }
+
+    100% {
+        background-color: green;
+    }
+}

@@ -1,0 +1,51 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    /* margin: 10px; */
+}
+
+body {
+    border: 4px rgb(71, 250, 71) solid;
+    margin: 0px;
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    /* horizontal management  */
+    /* justify-content: start; */
+    /* justify-content: end; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+
+
+
+    /* vertical management  */
+    /* align-items: center; */
+    /* align-items:end; */
+
+    /* align-items: stretch; */
+    /*for stretch height nahi hona chahiye*/
+
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+
+
+
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: wrap; */
+    /* align-content: center; */
+
+    /*flex direction + flex wrap*/
+    flex-flow: column wrap;
+
+}
+
+
+
+/* justify-content => horizontal */
+/* align-items => vertical */
+
+/* after flex-direction change xy interchange */

@@ -1,0 +1,15 @@
+body {
+    font-size: 100px;
+}
+
+.fa-twitter {
+    color: rgb(140, 222, 255);
+}
+
+.fa-facebook-f {
+    color: blue;
+}
+
+.fa-youtube {
+    color: red;
+}
