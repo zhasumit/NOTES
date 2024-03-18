@@ -17,9 +17,21 @@
             /* replacement for attribute : style="background-color: #222222;" */
         }
 
-
         h1 {
             color: whitesmoke
+        }
+
+        /* There is also attribute selector  */
+        /* class and attribute selector has same specificity, depends which written later*/
+        /* This is an example of atrribute selector  */
+        [mainHead="1"] {
+            color: chocolate;
+            font-size: xx-large;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 10px;
+            font-weight: 700;
+            background-color: antiquewhite;
+            line-height: 60px;
         }
 
         p {
@@ -49,8 +61,13 @@
         external ; works the BEST
     -->
 
+    <!-- inline styles >> ID selector >> Class or Attribute selector >> Element selector >> universal selector -->
 
     <h1>This is my website </h1>
+
+    <p mainHead="1">
+        Internal styling page
+    </p>
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Voluptatum, consectetur
