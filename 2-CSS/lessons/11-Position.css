@@ -19,6 +19,10 @@ body {
     font-size: 21px;
 }
 
+/* position : finds nearest positioned parent and goes to setting itself relative to that */
+/* even if the parent donot have the position transform, filter and perspective property acts as position */
+/* so if some positioning  is done and if any of those proerty is used : makes parent position if in case used */
+/* absolute position makes element fly in z-index, remove from the normal flow of the document */
 #box2 {
     border: 1px solid;
     height: 100px;
