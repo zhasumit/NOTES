@@ -10,6 +10,8 @@ h1 {
 }
 
 /* text-shadow: x-axis y-axis spread color */
+/* box-shadow: x-axix y-axis blur spread color inset */
+
 #s1 {
     /* shadow property */
     text-shadow: 5px 0px 0px red;
