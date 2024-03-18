@@ -21,7 +21,8 @@
     justify-content: center;
 }
 
-
+/* display none : makes things hidden and space is removed*/
+/* visibility hidden : makes things hidden but space is remaining */
 
 .container div {
     color: white;
