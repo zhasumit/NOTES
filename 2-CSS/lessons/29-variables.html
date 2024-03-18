@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --Pagebackground: rgb(255, 245, 231);
+            --background: rgb(255, 231, 200);
+            --red: #b95050;
+            --blue: rgb(57, 104, 142);
+            --defPad: 25px;
+            --defFont: 20px;
+            --contentFont: 17px;
+            --defRadius: 10px;
+        }
+
+        body {
+            background-color: var(--Pagebackground);
+        }
+
+        .container {
+            width: 80vw;
+            height: 90vh;
+            border-bottom-left-radius: var(--defRadius);
+            border-bottom-right-radius: var(--defRadius);
+            background-color: rgb(255, 231, 200);
+            margin: auto;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+
+        ul li:first-child {
+            text-shadow: 0px 2px 4px var(--red);
+        }
+
+        .nav {
+            padding: var(--defPad);
+            width: 60vw;
+            margin: auto;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: var(--red);
+            font-weight: 500;
+            font-size: var(--defFont);
+        }
+
+        .content {
+            padding-top: var(--defPad);
+            font-family: Verdana, sans-serif;
+            font-size: var(--contentFont);
+            color: var(--blue);
+            width: 70vw;
+            margin: auto;
+            line-height: 1.4em;
+
+        }
+
+        h2 {
+            font-family: fantasy;
+            color: var(--red);
+            line-height: 2em;
+            letter-spacing: var(--defRadius);
+        }
+
+        .poke {
+            position: fixed;
+            bottom: -40px;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Pokemons</li>
+                <li>Signup</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>Introduction</h2>
+            Pokémon is a Japanese media franchise consisting of video games, animated series and films, a trading
+            card game, and other related media. The franchise takes place in a shared universe in which humans co-exist
+            with creatures known as Pokémon, a large variety of species endowed with special powers. The franchise's
+            target audience is children aged 5 to 12,but it is known to attract people of all ages.
+
+            <h2>General concept</h2>
+            The player character takes the role of a Pokémon Trainer. The Trainer has three primary goals: travel and
+            explore the Pokémon world; discover and catch each Pokémon species in order to complete their Pokédex; and
+            train a team of up to six Pokémon at a time and have them engage in battles. Most Pokémon can be caught with
+            spherical devices known as Poké Balls. Once the opposing Pokémon is sufficiently weakened, the Trainer
+            throws the Poké Ball against the Pokémon, which is then transformed into a form of energy and transported
+            into the device. Once the catch is successful, the Pokémon is tamed and is under the Trainer's command from
+            then on.
+            <br>
+            After a Pokémon wins a battle, it gains experience and becomes stronger. After gaining a certain amount
+            of experience points, its level increases, as well as one or more of its statistics. As its level increases,
+            the Pokémon can learn new offensive and defensive moves to use in battle.Furthermore, many species
+            can undergo a form of spontaneous metamorphosis called Pokémon evolution, and transform into stronger
+            forms. Most Pokémon will evolve at a certain level, while others evolve through different means, such as
+            exposure to a certain item.
+        </div>
+
+        <div class="poke"> <img height="300px"
+                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4c7038e6-6eb5-4687-8ade-796860596368/d9px7h5-3d5adec9-7065-478b-b039-351f4e1b8801.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRjNzAzOGU2LTZlYjUtNDY4Ny04YWRlLTc5Njg2MDU5NjM2OFwvZDlweDdoNS0zZDVhZGVjOS03MDY1LTQ3OGItYjAzOS0zNTFmNGUxYjg4MDEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.2NzI2k0vo2J1NW_oEEUnU84W_TL7ZZqdMgR-SzeNuOA"
+                alt="charmelion">
+        </div>
+    </div>
+</body>
+
+</html>
