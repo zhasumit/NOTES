@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float </title>
+    <style>
+        img {
+            float: right;
+            display: flow-root;
+            margin: 10px;
+            /* fit float containers in the flow root */
+            /* float allows content on the other side if left -> allows content on right */
+        }
+
+        .card {
+            border: 1px dashed steelblue;
+        }
+
+        .cards:nth-child(2) {
+            clear: right;
+            /*donot show up float on right*/
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cards">
+        <div class="card">
+            <img src="https://gifdb.com/images/high/one-piece-clumsy-luffy-wfnpg10no18lhfl0.gif" alt="luffy"
+                height="200px">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo eius, aspernatur aut tempore repudiandae
+                dolore sed! Quod corrupti quibusdam delectus culpa vel cumque!</p>
+        </div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eaque error quod, laborum odio
+            eum, at modi ipsa, vitae rerum voluptatum dolor unde. Facere sequi et saepe, fuga maxime magnam placeat
+            accusamus ex unde autem tempore eaque dolor ipsum temporibus! Quis, odio perspiciatis maxime quidem incidunt
+            velit porro fugiat doloremque odit dignissimos enim obcaecati blanditiis ut, cum assumenda nulla illum
+            aspernatur consequuntur qui libero et officia magnam architecto quisquam. Deleniti temporibus dolor tenetur
+            ipsam fugiat quibusdam quis quae non commodi a error possimus deserunt natus iste, aliquam facilis accusamus
+            saepe asperiores fugit. Minima, minus accusantium nisi nulla cumque magni illo iure, alias aliquam eum amet
+            nesciunt saepe nemo laudantium aperiam perspiciatis quam voluptate, maiores sit. Quae delectus dolorem nulla
+            labore assumenda libero incidunt fugiat nam maiores est voluptate, dolorum ex earum vel porro non. Pariatur
+            accusamus debitis eaque laborum, quisquam tempore recusandae aut nemo? Ratione officiis provident quos
+            obcaecati. Esse officiis itaque, doloribus laborum distinctio ut voluptates modi labore ad et voluptatibus
+            sit rerum, autem aliquid hic dolor obcaecati soluta incidunt beatae. Tenetur dolor magnam illum quas vitae
+            nisi facere non ad eaque repudiandae magni, error iusto deserunt porro, nesciunt repellendus, enim id?
+            Repudiandae voluptates facere magni esse, dolorum ex alias praesentium atque illum natus? Aliquam impedit
+            sapiente ipsa enim minima suscipit quasi in nam! Nostrum adipisci quidem ad possimus odio, libero, vitae
+            natus officia molestiae accusamus placeat, laudantium iusto harum necessitatibus deserunt debitis obcaecati?
+            Iste in dolorem, vitae dolore quisquam saepe perferendis ea deserunt veritatis dicta, ipsa minus molestiae!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem optio eius, cumque tempora,
+            suscipit blanditiis ratione nostrum obcaecati consequatur eos voluptatem assumenda! Maiores mollitia beatae,
+            eaque odit aut magni, dolorem eos dolorum corrupti provident veritatis quo odio ducimus, quidem labore.
+            Aliquid minima provident fugit deleniti officiis culpa, ad voluptate obcaecati?</div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+
+</html>
