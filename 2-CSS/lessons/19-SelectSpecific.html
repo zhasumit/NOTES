@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="19-SelectSpecific.css">
     <title>select attribute</title>
+    <style>
+        /* dynamically inserting elements  */
+        body::before {
+            content: "inserted before content dynamically";
+            color: indianred;
+        }
+
+        body::after {
+            content: "Dynamically inserted after content";
+            color: slateblue;
+        }
+
+        body::first-letter {
+            font-size: 150px;
+            font-weight: 900;
+            color: cadetblue;
+        }
+
+        ::selection {
+            background-color: cadetblue;
+        }
+    </style>
 </head>
+
 <body>
-    <a href="https://www.youtube.com/"> ... Youtube ... </a> <br>
-    <a href="https://www.google.com/"> ... Google ... </a> <br>
-    <a href="https://www.facebook.com/"> ... Facebook ... </a> <br>
-    <a href="https://www.instagram.com/"> ... instagram ... </a> <br>
+    <a class="link" href="https://www.youtube.com/"> ... Youtube ... </a> <br>
+    <a class="link" href="https://www.google.com/"> ... Google ... </a> <br>
+    <a class="link" href="https://www.facebook.com/"> ... Facebook ... </a> <br>
+    <a class="link" href="https://www.instagram.com/"> ... instagram ... </a> <br>
 </body>
+
 </html>
