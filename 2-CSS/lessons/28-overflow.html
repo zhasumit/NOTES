@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .box {
+            width: 30vw;
+            height: 15vh;
+        }
+
+        .box1 {
+            border: 2px dashed teal;
+            /* Horizontal scroll, nomatter what is the content  */
+            overflow: scroll;
+        }
+
+        .box2 {
+            border: 2px dashed orangered;
+            /* if overflows then scroll is seen */
+            overflow: auto;
+        }
+
+        .box3 {
+            border: 2px dashed orangered;
+            white-space: nowrap;
+            /* nothing is wrapped in the box (flows outside) */
+        }
+
+        .box4 {
+            border: 2px dashed fuchsia;
+            /* Horizontal scroll, no text gets below the line */
+            overflow: auto;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            /* gives three dots after the line */
+        }
+
+        .box5 {
+            border: 2px dashed blueviolet;
+            /* disable scrolling givs ... */
+            overflow: hidden;
+        }
+
+
+        .box6 {
+            border: 2px dashed blueviolet;
+            /* disable scrolling programmatically as well ... */
+            overflow: clip;
+        }
+
+        .box7 {
+            border: 2px dashed blueviolet;
+            /* for x and y seperately ... */
+            overflow: hidden auto;
+            /* can be also done by overflow-x and overflow-y seperately */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1 box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quae modi velit autem ipsam. Nisi inventore
+        blanditiis at suscipit molestias, itaque illum aliquid fugit, cum quidem voluptatibus libero sint alias
+        architecto amet animi cupiditate ipsam, accusantium doloremque deleniti. Ab necessitatibus aperiam vel delectus
+        aut, nesciunt illum ad harum veniam suscipit quasi, quae nam aliquid accusantium praesentium quam minus
+        officiis, ipsum deserunt numquam ducimus voluptate enim vitae? Fugiat ducimus voluptas voluptatum quibusdam fuga
+        libero animi delectus voluptatem sit quidem tempora, eos nesciunt, reprehenderit at beatae totam non! Dolor eum
+        molestias excepturi, est, nisi dolore vitae, facere id vel officia ut eius.
+    </div>
+    <div class="box2 box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quae modi velit autem ipsam. Nisi inventore
+        blanditiis at suscipit molestias, itaque illum aliquid fugit, cum quidem voluptatibus libero sint alias
+        architecto amet animi cupiditate ipsam, accusantium doloremque deleniti. Ab necessitatibus aperiam vel delectus
+        aut, nesciunt illum ad harum veniam suscipit quasi, quae nam aliquid accusantium praesentium quam minus
+        officiis, ipsum deserunt numquam ducimus voluptate enim vitae? Fugiat ducimus voluptas voluptatum quibusdam fuga
+        libero animi delectus voluptatem sit quidem tempora, eos nesciunt, reprehenderit at beatae totam non! Dolor eum
+        molestias excepturi, est, nisi dolore vitae, facere id vel officia ut eius.
+    </div>
+    <div class="box3 box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quae modi velit autem ipsam. Nisi inventore
+        blanditiis at suscipit molestias, itaque illum aliquid fugit, cum quidem voluptatibus libero sint alias
+        architecto amet animi cupiditate ipsam, accusantium doloremque deleniti. Ab necessitatibus aperiam vel delectus
+        aut, nesciunt illum ad harum veniam suscipit quasi, quae nam aliquid accusantium praesentium quam minus
+        officiis, ipsum deserunt numquam ducimus voluptate enim vitae? Fugiat ducimus voluptas voluptatum quibusdam fuga
+        libero animi delectus voluptatem sit quidem tempora, eos nesciunt, reprehenderit at beatae totam non! Dolor eum
+        molestias excepturi, est, nisi dolore vitae, facere id vel officia ut eius.
+    </div>
+    <div class="box4 box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quae modi velit autem ipsam. Nisi inventore
+        blanditiis at suscipit molestias, itaque illum aliquid fugit, cum quidem voluptatibus libero sint alias
+        architecto amet animi cupiditate ipsam, accusantium doloremque deleniti. Ab necessitatibus aperiam vel delectus
+        aut, nesciunt illum ad harum veniam suscipit quasi, quae nam aliquid accusantium praesentium quam minus
+        officiis, ipsum deserunt numquam ducimus voluptate enim vitae? Fugiat ducimus voluptas voluptatum quibusdam fuga
+        libero animi delectus voluptatem sit quidem tempora, eos nesciunt, reprehenderit at beatae totam non! Dolor eum
+        molestias excepturi, est, nisi dolore vitae, facere id vel officia ut eius.
+    </div>
+    <div class="box5 box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quae modi velit autem ipsam. Nisi inventore
+        blanditiis at suscipit molestias, itaque illum aliquid fugit, cum quidem voluptatibus libero sint alias
+        architecto amet animi cupiditate ipsam, accusantium doloremque deleniti. Ab necessitatibus aperiam vel delectus
+        aut, nesciunt illum ad harum veniam suscipit quasi, quae nam aliquid accusantium praesentium quam minus
+        officiis, ipsum deserunt numquam ducimus voluptate enim vitae? Fugiat ducimus voluptas voluptatum quibusdam fuga
+        libero animi delectus voluptatem sit quidem tempora, eos nesciunt, reprehenderit at beatae totam non! Dolor eum
+        molestias excepturi, est, nisi dolore vitae, facere id vel officia ut eius.
+    </div>
+    <div class="box6 box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quae modi velit autem ipsam. Nisi inventore
+        blanditiis at suscipit molestias, itaque illum aliquid fugit, cum quidem voluptatibus libero sint alias
+        architecto amet animi cupiditate ipsam, accusantium doloremque deleniti. Ab necessitatibus aperiam vel delectus
+        aut, nesciunt illum ad harum veniam suscipit quasi, quae nam aliquid accusantium praesentium quam minus
+        officiis, ipsum deserunt numquam ducimus voluptate enim vitae? Fugiat ducimus voluptas voluptatum quibusdam fuga
+        libero animi delectus voluptatem sit quidem tempora, eos nesciunt, reprehenderit at beatae totam non! Dolor eum
+        molestias excepturi, est, nisi dolore vitae, facere id vel officia ut eius.
+    </div>
+    <div class="box7 box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quae modi velit autem ipsam. Nisi inventore
+        blanditiis at suscipit molestias, itaque illum aliquid fugit, cum quidem voluptatibus libero sint alias
+        architecto amet animi cupiditate ipsam, accusantium doloremque deleniti. Ab necessitatibus aperiam vel delectus
+        aut, nesciunt illum ad harum veniam suscipit quasi, quae nam aliquid accusantium praesentium quam minus
+        officiis, ipsum deserunt numquam ducimus voluptate enim vitae? Fugiat ducimus voluptas voluptatum quibusdam fuga
+        libero animi delectus voluptatem sit quidem tempora, eos nesciunt, reprehenderit at beatae totam non! Dolor eum
+        molestias excepturi, est, nisi dolore vitae, facere id vel officia ut eius.
+    </div>
+</body>
+
+</html>
