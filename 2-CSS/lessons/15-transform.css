@@ -1,54 +1,122 @@
+.container {
+	width: 90vw;
+	border: 2px solid green;
+	border-radius: 20px;
+}
+
+.box {
+	height: 50px;
+	width: 70px;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: tomato;
+	border: 3px inset slateblue;
+	margin: 20px;
+}
+
+.item-1 {
+	transform: rotate(45deg);
+}
+.item-2 {
+	transform: rotate(0.25turn);
+}
+.item-3 {
+	transform: rotateX(40deg);
+}
+.item-4 {
+	transform: rotateY(40deg);
+}
+.item-5 {
+	transform: rotateZ(40deg);
+}
+.item-6 {
+	transform: scale(1.6);
+}
+.item-7 {
+	transform: scaleX(2);
+}
+.item-8 {
+	transform: scaleY(0.5);
+}
+.item-9 {
+	transform: scaleZ(2.5);
+}
+.item-10 {
+	transform: skew(10deg);
+}
+.item-11 {
+	transform: skewX(30deg);
+}
+.item-12 {
+	transform: skewY(30deg);
+}
+.item-14 {
+	transform: translateX(100px);
+}
+.item-13 {
+	transform: translateY(100px);
+}
+.item-15 {
+	transform: translate(100px, -50px);
+}
+
+.item-16 {
+	transform-origin: (10%, 10%);
+	transform: rotate(45deg);
+}
 h1 {
-    border: 4px solid tomato;
-    height: 220px;
-    width: 250px;
-    text-align: center;
-    font-size: 150px;
-    background-color: skyblue;
-    font-weight: 400;
-    padding: 15px;
+	border: 4px solid tomato;
+	height: 220px;
+	width: 250px;
+	text-align: center;
+	font-size: 150px;
+	background-color: skyblue;
+	font-weight: 400;
+	padding: 15px;
 
-    /* ------------------------------------------------------------------- */
+	/* ------------------------------------------------------------------- */
 
-    /* moves element in x-axis */
-    transform: translateX(150px);
+	/* moves element in x-axis */
+	transform: translateX(150px);
 
-    /* moves element in y-axis */
-    transform: translateY(150px);
+	/* moves element in y-axis */
+	transform: translateY(150px);
 
-    /* moves element in Z-axis */
-    transform: translateZ(150px);
+	/* moves element in Z-axis */
+	transform: translateZ(150px);
 
-    /* translate x and y can be done at the same time */
-    transform: translate(150px, 150px);
+	/* translate x and y can be done at the same time */
+	transform: translate(150px, 150px);
 
-    /* ------------------------------------------------------------------- */
+	/* ------------------------------------------------------------------- */
 
-    /* transform Rotation */
-    transform: rotateX(180deg);
-    transform: rotateY(180deg);
-    transform: rotateZ(180deg);
+	/* transform Rotation */
+	transform: rotateX(180deg);
+	transform: rotateY(180deg);
+	transform: rotateZ(180deg);
 
-    /* ------------------------------------------------------------------- */
+	/* ------------------------------------------------------------------- */
 
-    /* scaling of elements */
-    transform: scaleX(5);
-    transform: scaleY(1.5);
-    /* scaling both x and y value at the same time */
-    transform: scale(5, 1.5);
+	/* scaling of elements */
+	transform: scaleX(5);
+	transform: scaleY(1.5);
+	/* scaling both x and y value at the same time */
+	transform: scale(5, 1.5);
 
-    /* ------------------------------------------------------------------- */
+	/* ------------------------------------------------------------------- */
 
-    /* skewing the element */
-    transform: skewX(45deg);
-    transform: skewY(45deg);
-    transform: skew(25deg, 25deg);
+	/* skewing the element */
+	transform: skewX(45deg);
+	transform: skewY(45deg);
+	transform: skew(25deg, 25deg);
 
-    /* ------------------------------------------------------------------- */
+	/* ------------------------------------------------------------------- */
 
-    /* matrix contians all the above discussed transformations */
-    transform: matrix();
-    /* matrix contains of the following
+	/* matrix contains all the above discussed transformations */
+	transform: matrix();
+	/* matrix contains of the following
     scaleX(),
     skewY(),
     skewX(),
