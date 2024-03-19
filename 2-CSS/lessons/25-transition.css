@@ -26,7 +26,7 @@ body {
     width: 70%;
 
     transform: skewX(-30deg);
-    transform: skewy(-30deg);
+    transform: skewY(-30deg);
 
     transform: translate(100px, -100px);
 }
