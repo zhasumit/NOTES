@@ -1,0 +1,45 @@
+body {
+	margin: 0;
+	background-color: #222222;
+}
+
+.box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	background-color: steelblue;
+	font: 100 40px fantasy;
+	color: white;
+	border: 2px solid greenyellow;
+	border-radius: 10px;
+	margin: 3px;
+}
+
+.container {
+	border: 2px solid tomato;
+	display: grid;
+	height: 90vh;
+	grid-template-columns: 3fr 2fr 4fr;
+	/* repeat(4,1fr) */
+	/* repeat(4, minmax(100px, 1fr) helps with minmax of the cols*/
+	row-gap: 50px;
+	column-gap: 20px;
+	/* There is no padding if gap is used */
+	align-items: center;
+	/* justify-items: center; */
+}
+
+.item-4 {
+	align-self: last baseline;
+}
+.item-2 {
+	align-self: first baseline;
+}
+
+/* align self is used to make individual changes to the elements (works within the cell) */
+/* if the container is big and we need to center the content then use justify-content center we can use end start and other props */
+
+/* cell ke within -> justify item , align items */
+/* content position -> justify content , align content (used when the overall area of the grid container is big) */
+/* place content -> works for both justify content and align content at the same time */
