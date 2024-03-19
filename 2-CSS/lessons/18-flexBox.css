@@ -34,3 +34,12 @@
     font-size: 50px;
     margin: 5px;
 }
+
+/* justify content works on the main axis (longer axis is the main axis) smaller axis is called cross axis */
+/* align items : used when only one line is there */
+/* align content works if there are more than one line */
+/* gap is to give gap between elements, also has row-gap and col-gap */
+/* order: item property where if we put the order -> makes element go to places, smaller order -> moves to front, default order is 0 */
+/* flex grow : how much element grows, takes x times the space as compared to others */
+/* flex shrink: how much the element shinks compared to others, if given 2 -> shrinks at 2times the speed of other elements */
+/* align self: override some single element and make it move out of the order of flex */
