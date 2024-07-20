@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <style>
+        * {
+            background-color: #222;
+            color: #fff;
+        }
+
+        /* Selects the first letter of every heading element */
+        h1::first-letter {
+            font-size: 2em;
+            color: red;
+            font-style: italic;
+        }
+
+        p::first-line {
+            background-color: rgba(144, 140, 7, 0.799);
+        }
+
+        p::selection {
+            color: rgb(193, 255, 101);
+            background-color: rgb(43, 46, 201);
+        }
+
+        #fruits li::before {
+            content: "🧀";
+            font-size: 2em;
+        }
+
+        #apple::after {
+            content: "🍎";
+        }
+
+        #orange::after {
+            content: "🍊";
+        }
+
+        #banana::after {
+            content: "🍌";
+        }
+
+        #fruits li::marker {
+            content: "🪀";
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Used to style specific parts of the element -->
+    <!-- selector::pseudo-Element -->
+    <h1>Hello pseudo coders</h1>
+    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores ex ratione magnam quam libero repudiandae
+        doloribus magni delectus possimus optio quasi, aliquam eligendi soluta temporibus doloremque neque blanditiis
+        non eaque.</p>
+    <ul id="fruits">
+        <li id="apple">apple</li>
+        <li id="orange">orange</li>
+        <li id="banana">banana</li>
+    </ul>
+</body>
+
+</html>

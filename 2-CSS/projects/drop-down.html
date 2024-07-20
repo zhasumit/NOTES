@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop down menu example</title>
+    <style>
+        * {
+            background-color: rgb(17, 17, 34);
+            color: #fff;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .dropdown {
+            display: inline-block;
+        }
+
+        button {
+            background-color: rgb(33, 76, 41);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: rgb(25, 51, 25);
+        }
+
+        .contents a {
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+        }
+
+        .dropdown .contents {
+            display: none;
+            position: absolute;
+            min-width: 100px;
+            box-shadow: 2px 2px 5px rgb(68, 50, 0);
+        }
+
+        .dropdown:hover .contents {
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: rgb(128, 77, 172);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dropdown">
+        <button>Food</button>
+        <div class="contents">
+            <a href="#">Pizza</a>
+            <a href="#">Burger</a>
+            <a href="#">Fries</a>
+            <a href="#">Salad</a>
+            <a href="#">Dessert</a>
+        </div>
+    </div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A tempora saepe pariatur rem vero impedit in quis
+        dolores dolorum labore et, architecto eius enim dignissimos ea id? Eveniet consequatur incidunt placeat minus
+        delectus, blanditiis aperiam ipsam mollitia! Aspernatur tempore repudiandae temporibus ab possimus
+        reprehenderit! Accusantium fuga reiciendis praesentium culpa, nemo expedita odit asperiores aperiam sit
+        voluptatibus quas cumque maiores. Minus molestiae atque commodi magnam animi? Quia adipisci itaque ipsum
+        repellat at eveniet est delectus autem esse laborum ex, aliquam voluptate facilis, explicabo repudiandae numquam
+        fuga neque corrupti placeat? Unde ipsam consectetur nisi, laborum eligendi rerum cupiditate debitis hic eaque
+        aut.</p>
+</body>
+
+</html>
