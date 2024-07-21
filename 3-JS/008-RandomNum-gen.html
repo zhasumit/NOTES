@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice roller</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #181a24;
+            color: whitesmoke;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 3vh;
+        }
+
+        body {
+            height: 70vh;
+            width: 97vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #rollBtn {
+            background-color: steelblue;
+            border-radius: 3px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dices{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 20px;
+            font-size: 60px;
+            background-color: #181a2400;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="rollBtn">Roll</button>
+    <div class="dices"> 
+        <label id="dice1"></label>
+        <label id="dice2"></label>
+        <label id="dice3"></label>
+    </Dices>
+
+    <script>
+        const myBtn = document.getElementById("rollBtn")
+        const dice1 = document.getElementById("dice1")
+        const dice2 = document.getElementById("dice2")
+        const dice3 = document.getElementById("dice3")
+
+        // Random Number generator 
+        // since the dices fall from 1-6
+        const min = 1;
+        const max = 6;
+
+        function randomNumGenerator() {
+            return Math.floor(Math.random() * (max - min + 1))
+        }
+
+        // Upon rolling the dice
+        myBtn.addEventListener("click", () => {
+            dice1.textContent = randomNumGenerator()
+            dice2.textContent = randomNumGenerator()
+            dice3.textContent = randomNumGenerator()
+        })
+
+    </script>
+</body>
+
+</html>
