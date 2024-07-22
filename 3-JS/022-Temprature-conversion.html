@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp conversion</title>
+    <style>
+        * {
+            background-color: rgb(20, 19, 33);
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+            font-weight: 100;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: rgb(186, 176, 255);
+        }
+
+        #textBox {
+            padding: 10px;
+            border: none;
+            background: #000;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        form {
+            padding: 0px 10px;
+            padding-top: 20vh;
+            text-align: center;
+            max-width: 300px;
+            margin: auto;
+        }
+
+        button {
+            padding: 7px 15px;
+            font-size: 18px;
+            border: none;
+            background-color: steelblue;
+            margin: 10px 0px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h1>Temperature conversion:</h1>
+        <input type="number" id="textBox" placeholder="Temperature"><br>
+
+        <input type="radio" id="toF" name="unit">
+        <label for="toF">°C to °F</label><br>
+
+        <input type="radio" id="toC" name="unit">
+        <label for="toC">°F to °C</label><br>
+
+        <button type="button" onclick="convert()">submit</button>
+        <p id="result"></p>
+    </form>
+
+</body>
+<script>
+    const textBox = document.getElementById("textBox");
+    const toF = document.getElementById("toF");
+    const toC = document.getElementById("toC");
+    const result = document.getElementById("result");
+
+    function convert() {
+        let temp;
+        if (toFahrenheit.checked) {
+            temp = Number(textBox.value);
+            temp = temp * 9 / 5 + 32;
+            result.textContent = temp.toFixed(1) + "°F";
+        } else if (toCelsius.checked) {
+            temp = Number(textBox.value);
+            temp = (temp - 32) * (5 / 9);
+            result.textContent = temp.toFixed(1) + "°C";
+        } else
+            result.textContent = "Select a unit";
+    }
+</script>
+
+</html>

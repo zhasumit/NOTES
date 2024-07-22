@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checked Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #141726;
+            color: whitesmoke;
+        }
+
+        body {
+            padding-top: 50px;
+            width: 80%;
+            margin: auto;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        #payment {
+            padding-top: 7px;
+            padding-left: 30px;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 2.2vh;
+            background-color: rgba(71, 255, 95, 0.571);
+            border: none;
+            border-radius: 4px;
+            margin: 15px;
+        }
+
+        button:hover {
+            background-color: rgba(58, 202, 77, 0.571);
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus praesentium cupiditate consequuntur omnis
+        quas in, adipisci placeat vero, at accusantium ratione? Illo autem blanditiis maxime facere quas impedit atque
+        ex accusantium aut ipsam at quia rem tempore praesentium deserunt vero ut beatae earum non pariatur aspernatur,
+        ad dolorum expedita natus. Iusto illum dignissimos fuga voluptatem saepe aliquam officiis nam fugiat numquam a,
+        ab dicta eius sapiente quia commodi, quidem autem alias labore ad nisi? Eum itaque exercitationem aperiam minus
+        voluptatum provident cumque adipisci quod ea atque deleniti sapiente non, veritatis, odit necessitatibus amet
+        vero? Magnam fugiat dolores eligendi itaque quis.</p>
+
+    <div id="subsciption">
+        <input type="checkbox" id="myCheckBox">
+        <label for="myCheckBox">Subscribe to the newsletter</label>
+        <div id="payment">
+            <input type="radio" id="visaBtn" name="card">
+            <label for="visaBtn">Visa</label>
+            <br>
+            <input type="radio" id="mastercardBtn" name="card">
+            <label for="mastercardBtn">Mastercard</label>
+            <br>
+            <input type="radio" id="Rupay" name="card">
+            <label for="Rupay">Rupay</label>
+        </div>
+        <button type="submit" id="submitBtn">Subscribe</button>
+        <p id="subsciptionResult"></p>
+        <p id="paymentResult"></p>
+    </div>
+</body>
+<script>
+    // .checked : prop to decide checked state of the element
+    // radio button and checkboxes
+
+    const myCheckBox = document.getElementById('myCheckBox');
+    const visaBtn = document.getElementById('visaBtn');
+    const mastercardBtn = document.getElementById('mastercardBtn');
+    const rupay = document.getElementById('Rupay');
+    const submitBtn = document.getElementById("submitBtn");
+    const subsciptionResult = document.getElementById('subsciptionResult');
+    const paymentResult = document.getElementById('paymentResult');
+
+    submitBtn.onclick = function () {
+        myCheckBox.checked ?
+            subsciptionResult.textContent = "You are subscribed!!!"
+            : subsciptionResult.textContent = "You are NOT subscribed!!!"
+
+        visaBtn.checked ? paymentResult.textContent = "paying through VISA ..." :
+            mastercardBtn.checked ? paymentResult.textContent = "paying through Mastercard..." :
+                rupay.checked ? paymentResult.textContent = "paying through Rupay..." :
+                    paymentResult.textContent = "Please select a payment method...";
+    }
+</script>
+
+</html>
