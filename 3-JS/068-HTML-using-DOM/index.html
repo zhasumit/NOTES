@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding HTMLs</title>
+    <style>
+        * {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #343a54;
+            color: white;
+        }
+
+        body {
+            width: 90%;
+            margin: auto;
+        }
+
+        .box {
+            border: 3px solid steelblue;
+            width: 100%;
+            height: 15vh;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="box1" class="box">BOX1</div>
+    <div id="box2" class="box">BOX2</div>
+    <div id="box3" class="box">BOX3</div>
+    <div id="box4" class="box">BOX4</div>
+</body>
+
+<script>
+    // Adding element 
+    // STEP1 : create the element
+    // STEP2 : Add attributes/properties
+    // STEP3 : Append element to DOM
+    // STEP4 : Remove HTML element  
+
+    const newH3 = document.createElement("h3");     // step1 : create the element
+    newH3.textContent = "I like boxes with pizza"   // step2 : content of element 
+    newH3.style.textAlign = "center";               // adding some attribute
+    newH3.style.color = "tomato";
+
+    document.body.append(newH3);                    // appending (or prepending)
+
+    const bodyheading = document.createElement("h1");
+    bodyheading.textContent = "I love pizza!";
+    bodyheading.style.textAlign = "center";
+    bodyheading.style.color = "magenta";
+    bodyheading.style.fontWeight = "400";
+    bodyheading.style.margin = "1em";
+
+    document.body.prepend(bodyheading);
+
+
+    const pizza = document.createElement("p")
+    pizza.textContent = "Paneer tikka pizza";
+    pizza.style.textAlign = "center";
+    pizza.style.color = "#FF1a44";
+    pizza.style.fontWeight = "400";
+    const box1 = document.getElementById("box1")
+    box1.appendChild(pizza);
+
+
+    // insert before some element 
+    const box2 = document.getElementById("box2")
+    const box3 = document.getElementById("box3")
+    const box4 = document.getElementById("box4")
+
+    const newPizza = document.createElement("p");
+    newPizza.textContent = "PIZZA";
+    newPizza.style.textAlign = "center";
+    newPizza.style.padding = "1em";
+    document.body.insertBefore(newPizza, box2); // insert before box2
+
+
+    // without the ids we select using querySelectorAll and then go for the children
+    // then using the index in the nodelist we can insert before the element 
+    function makeElement(elementname = "p", content = "PIZZA", color = "greenyellow") {
+        const newElement = document.createElement(elementname);
+        newElement.textContent = content;
+        newElement.style.textAlign = "center";
+        newElement.style.padding = ".5em";
+        newElement.style.color = color;
+        return newElement;
+    }
+
+    const boxes = document.querySelectorAll(".box")
+    document.body.insertBefore(makeElement("p", "margherita pizza"), boxes[3])
+
+
+    const farmFreshPizza = makeElement("p", "farmFresh pizza", "yellow")
+    box3.appendChild(farmFreshPizza)
+    box3.removeChild(farmFreshPizza)
+    // comment uncomment to see the changes
+
+
+
+</script>
+
+</html>
