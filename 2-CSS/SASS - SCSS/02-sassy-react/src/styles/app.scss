@@ -1,0 +1,131 @@
+// This is importing as module
+@use "_backgrounds" as bg;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    font-weight: 300;
+    color: white;
+    background-color: #20233d;
+    box-sizing: border-box;
+}
+
+// we can store the things in a variable
+$blue: #557ee4;
+$yellow: #f1f098;
+$boxLength: 100px;
+$fSize: 18px;
+$padding: 7px;
+
+// we can make array of variables (1 indexing, indexing starts from 1)
+$blueShades: #bdc5ff, #a7b1ff, #8b98ff, #566aff, #2c3ec6;
+
+// we can import the colors
+// if the same name variables are imported the later is taken into account
+// it is like the default imports in the node modules
+// we can import with some other name like import in files
+@import "_productCardColors";
+// @use is used to avoid naming conflicts (look at line 1) since it is to be imported before root
+
+body {
+    display: flex;
+    font-size: $fSize;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 30%;
+
+    .box {
+        width: $boxLength;
+        height: $boxLength;
+        background-color: $blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: $padding;
+        border-radius: $padding;
+    }
+
+    .smallBox {
+        padding: $padding $padding * 2;
+        margin: $padding;
+        border-radius: $padding;
+        background-color: nth($blueShades, 3);
+    }
+
+    // nesting only foucs of the things nested inside the elements
+    // > : direct decendent
+    // if nothing mentioned takes all levels of nesting
+    .darkBox {
+        background-color: nth($blueShades, 5);
+        span {
+            color: #ff9e8d;
+            padding: 5px 5px;
+            border-radius: 50%;
+            background-color: nth($blueShades, 4);
+            background-color: none;
+        }
+    }
+
+    // parser compiles the code once and then leaves it to import
+    // otherwise the compiler keeps constant watch over the file
+    .productCard {
+        background-color: bg.$bg-blue;
+        text-align: center;
+        padding: $padding * 1.9 10px;
+        h2 {
+            background-color: bg.$bg-red;
+            color: $product-yellow;
+        }
+        a {
+            background-color: bg.$bg-blue;
+            color: $product-brown;
+            text-decoration: none;
+        }
+    }
+
+    button {
+        padding: $padding $padding * 3;
+        background-color: nth($blueShades, 4);
+        border-radius: $padding;
+        border: none;
+        font-size: $fSize;
+        font-weight: 400;
+    }
+
+    // we extend all the properties of some other elements using extend
+    p {
+        @extend button;
+    }
+
+    // This is template to use further extend the CSS
+    // we use some template and extend the css to some other class
+    %sometemplatecss {
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    // @extend %sometemplatecss
+
+    // making custom function to get the css colors
+    @mixin someTempCSS($col, $pad: $padding, $wid: "1px") {
+        background-color: $col;
+        // we can do some opertors in the measurements
+        padding: $pad $pad * 3;
+        border: none;
+        cursor: pointer;
+        border-bottom: $wid solid white;
+        border-right: $wid solid white;
+    }
+
+    .customButton {
+        @include someTempCSS(bg.$bg-pink, $padding, 2px);
+        &:hover {
+            background-color: bg.$bg-yellow;
+        }
+    }
+}

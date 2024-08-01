@@ -1,0 +1,15 @@
+SASS - CSS . python like syntax (indentation)
+SCSS - CSS3 . hierarchial syntax like JS and C++(brackets)    
+
+
+npm i -g sass               : to install the sass compiler     
+
+compiler starts watching the file
+sass -w ./filename.sass outputCSSfile.css 
+
+
+in react files npm i sass like other modules to install the file compiler  
+
+npm i sass      to get the sass in the react folder structure 
+
+
