@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  background: linear-gradient(rgba(165, 170, 233, 0.8), #8c9af6);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter Tight", sans-serif;
+}
+
+.card {
+  background: #c8deff;
+  max-width: 280px;
+  padding: 1em 1em;
+  line-height: 20px;
+  margin: 3.5rem 1rem;
+  position: relative;
+}
+
+.img {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  border: 5px solid white;
+  position: absolute;
+  right: -30px;
+  bottom: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */
