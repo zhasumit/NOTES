@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Classlist using JS</title>
+        <style>
+            * {
+                background-color: rgb(17, 19, 34);
+                color: white;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 10px;
+            }
+            button {
+                border: none;
+                font-size: 1.2em;
+                padding: 0.7em 1.5em;
+                border-radius: 0.4em;
+                background-color: rgb(96, 1, 113);
+            }
+
+            .enabled {
+                background-color: steelblue;
+            }
+
+            .disabled {
+                background-color: rgb(193, 193, 193);
+                color: grey;
+                font-weight: 600;
+            }
+
+            .specialBtns {
+                background-color: slateblue;
+            }
+            .green {
+                background-color: rgb(90, 205, 144);
+            }
+            .purple {
+                background-color: rgb(157, 100, 214);
+            }
+
+            .hover {
+                background-color: rgb(180, 70, 70);
+            }
+        </style>
+    </head>
+    <body>
+        <button id="myBtn" class="btn">Hover</button>
+        <button id="myBtn2">Toggle on hover</button>
+        <button id="myBtn3" class="enabled">Disable</button>
+        <button id="myBtn4">Strict Disable</button>
+        <div>
+            <button class="specialBtns">1</button>
+            <button class="specialBtns">2</button>
+            <button class="specialBtns">3</button>
+            <button class="specialBtns">4</button>
+            <button class="specialBtns">5</button>
+        </div>
+
+        <script>
+            // classList = Element property in JavaScript used to interact
+            //                     with an element's list of classes (CSS classes)
+            //                     Allows you to make reusable classes for many elements
+            //                     across your webpage.
+
+            // add()
+            // remove()
+            // toggle(Remove if present, Add if not)
+            // replace(oldClass, newClass)
+            // contains()
+
+            // BUTTON
+
+            const button = document.getElementById("myBtn");
+            button.classList.add("enabled"); // adding enabled to change bg-color
+            button.classList.remove("btn"); // check the class list in the HTML of dev tools
+
+            button.addEventListener(
+                "mouseover",
+                (e) => {
+                    e.target.classList.add("hover");
+                },
+                false
+            );
+            button.addEventListener(
+                "mouseout",
+                (e) => {
+                    e.target.classList.remove("hover");
+                },
+                false
+            );
+
+            const btn2 = document.getElementById("myBtn2");
+            btn2.addEventListener("mouseover", (e) => {
+                e.target.classList.toggle("hover");
+            });
+
+            const btn3 = document.getElementById("myBtn3");
+            btn3.addEventListener("click", (e) => {
+                e.target.classList.replace("enabled", "disabled");
+                e.target.textContent += "d";
+            });
+
+            const btn4 = document.getElementById("myBtn4");
+            btn4.addEventListener("click", (e) => {
+                if (e.target.classList.contains("disabled")) {
+                    e.target.textContent = "IT's disabled 🤬";
+                    e.target.style.backgroundColor = "orange";
+                }
+                e.target.classList.add("disabled");
+            });
+
+            // we can do this thing with not only the buttons but all the other elements
+
+            // taking nodelist and then making the things work for a bunch of nodes
+            const specialButtons = document.querySelectorAll(".specialBtns");
+            specialButtons.forEach((button) => {
+                button.addEventListener("click", (e) => {
+                    e.target.classList.add("green");
+                });
+                button.addEventListener("dblclick", (e) => {
+                    e.target.classList.toggle("purple");
+                });
+                button.addEventListener("mouseover", (e) => {
+                    e.target.classList.toggle("hover");
+                });
+                button.addEventListener("mouseout", (e) => {
+                    e.target.classList.toggle("hover");
+                });
+            });
+        </script>
+    </body>
+</html>

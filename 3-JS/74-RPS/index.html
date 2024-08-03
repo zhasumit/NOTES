@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rock Paper Scissor</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+                    "Helvetica Neue", sans-serif;
+                font-weight: 400;
+            }
+
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            #choices {
+                margin-bottom: 40px;
+            }
+
+            #choices img {
+                width: 100px;
+                height: 100px;
+            }
+
+            #choices button {
+                background-color: rgb(160, 209, 249);
+                cursor: pointer;
+                border-radius: 50%;
+                padding: 1em 1em;
+                border: none;
+                transition: background-color 0.3s ease;
+            }
+
+            #choices button:hover {
+                background-color: rgb(140, 185, 230);
+            }
+
+            .display{
+                font-size: 1.5rem;
+            }
+
+            #resultDisplay{
+                margin: 20px 0;
+                font-size: 4em;
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>ROCK-PAPER-SCISSOR</h1>
+        <div id="choices">
+            <button onclick="playGame('rock')">
+                <img src="./images/rock.png" alt="Rock" />
+            </button>
+            <button onclick="playGame('paper')">
+                <img src="./images/paper.png" alt="Paper" />
+            </button>
+            <button onclick="playGame('scissor')">
+                <img src="./images/scissor.png" alt="Scissor" />
+            </button>
+        </div>
+
+        <div class="display">
+            <div id="playerDisplay">Player:</div>
+            <div id="computerDisplay">Computer:</div>
+        </div>
+        <div id="resultDisplay"></div>
+    <script src="./index.js"></script>    
+    </body>
+    </html>
