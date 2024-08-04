@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                color: white;
+                background-color: #161636;
+                font-family: system-ui, sans-serif;
+                font-weight: 300;
+                font-size: 1.4em;
+            }
+            body {
+                display: flex;
+                height: 100vh;
+                width: 100vw;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        Check console
+        <script>
+            // cookie = a small text file stored on your computer
+            //                 used to remember information about the user
+            //                 saved in name=value pairs
+
+            console.log("cookie enabled?", navigator.cookieEnabled);
+            document.cookie =
+                "firstName=Spongebob; expires=Sun, 1 January 2030 12:00:00 UTC; path=/";
+            document.cookie =
+                "lastName=Squarepants; expires=Sun, 1 January 2030 12:00:00 UTC; path=/";
+            let allCookies = document.cookie;
+            console.dir(allCookies);
+            console.log(document.cookie);
+
+            // function to create cookies
+            function setCookie(name, value, daysToLive) {
+                const date = new Date();
+                date.setTime(date.getTime() + daysToLive * 24 * 60 * 60 * 1000);
+                let expires = "expires=" + date.toUTCString();
+                document.cookie = `${name}=${value}; ${expires}; path=/`;
+            }
+            setCookie("email", "sponge@gmail.com", 365);
+            console.log(document.cookie);
+
+            // deletion : set the expiry date after some time -> makes the thing expire
+            function deleteCookie(name) {
+                setCookie(name, null, null);
+            }
+            deleteCookie("firstName"); // there is no firsname now comment this line to bring it back
+
+            function getCookie(name) {
+                const cDecoded = decodeURIComponent(document.cookie);
+                const cArray = cDecoded.split("; ");
+                let result = null;
+                cArray.forEach((element) => {
+                    if (element.indexOf(name) == 0)
+                        result = element.substring(name.length + 1);
+                });
+                return result;
+            }
+            console.log(getCookie("firstName"));
+            console.log(getCookie("lastName"));
+            console.log(getCookie("email"));
+        </script>
+    </body>
+</html>
