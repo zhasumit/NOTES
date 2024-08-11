@@ -1,0 +1,12 @@
+npm i -D tailwind : install tailwind as dev dependency 
+npx tailwind init : to initialise the tailwind config file 
+
+
+then change the tailwind.config.js with content as HTML CSS JS for constant watches 
+then we use certain bundlers that to accumulate all code at once, then watch that on some port
+
+
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch : to watch the files in src 
+all the previous css is nullified to be like p tag and resented 
+
+tailwind CLI that is installed takes all and writes the CSS in output file 
