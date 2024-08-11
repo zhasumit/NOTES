@@ -1,0 +1,29 @@
+Built on Javascript-core engine performance minded JS engine to increase developement speed 
+
+$ bun init : like npm init initialises the folder/repo with the bun config files  
+
+out of the box support of ts extension
+$ bun run fileName.extension  : runs the file  
+        extension part is mandatory 
+
+
+WATCH mode (nodemon type)
+$ bun --watch fileName.extension : like nodemon watches the file watch mode 
+
+
+Hot reload for states 
+$ bun --hot fileName.extension 
+
+
+no need of env package (manages that internally)
+
+- npx using bun x
+- both import and require syntax 
+
+
+
+.test.ts extension is there for the testing 
+
+
+reloading the output using watch mode --watch 
+bun install react react-dom: for react 
