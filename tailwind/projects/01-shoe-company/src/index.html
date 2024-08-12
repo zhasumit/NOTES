@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The Shoe Company</title>
+        <link href="./output.css" rel="stylesheet" />
+        <link
+            rel="shortcut icon"
+            href="./images/favshoe.png"
+            type="image/x-icon"
+        />
+    </head>
+    <body class="bg-black text-white">
+        <header
+            class="px-10 flex items-center justify-between fixed w-full max-w-[1440px] left-[50%] -translate-x-[50%]"
+        >
+            <a href="#">
+                <img
+                    class="w-20 md:w-32"
+                    src="./images/logo.png"
+                    alt="logo-theShoeCompany"
+                />
+                <p class="text-xs -mt-5 md:text-sm md:-mt-8">TheShoeCompany</p>
+            </a>
+            <nav class="hidden md:block space-x-6 lg:space-x-10 lg:text-lg">
+                <a href="#hero">Home</a>
+                <a href="#howitworks">How it Works?</a>
+                <a href="#about">About</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contactus">Contact Us</a>
+            </nav>
+            <p class="text-3xl md:hidden">☰</p>
+        </header>
+        <section
+            id="hero"
+            class="bg-[url('./images/white-bg.png')] bg-contain bg-no-repeat bg-right pt-36 fit-cover"
+        >
+            <div
+                class="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto"
+            >
+                <h1 class="text-5xl md:text-6xl lg:text-8xl lg:leading-[100px]">
+                    The <br />Shoe <br />Company
+                </h1>
+                <div>
+                    <img
+                        class="md:h-[600px]"
+                        src="./images/leftProfile.png"
+                        alt="white-shoe-leftProfile"
+                    />
+                </div>
+            </div>
+        </section>
+        <section id="howitworks" class="fit-cover flex flex-col items-center">
+            <h2 class="text-center text-xl md:text-3xl lg:text-4xl p-12">
+                Have they finally made the <br />perfect workout shoe?
+            </h2>
+            <div class="relative w-full flex justify-center">
+                <img
+                    class="w-[700px] max-width-7xl"
+                    src="./images/rightProfile.png"
+                    alt="right-profile-shoe"
+                />
+                <div class="w-60 absolute top-20 left-24">
+                    <h3 class="text-xl font-semibold">THE HEEL</h3>
+                    <p class="text-sm md:text-md">
+                        The heel is well built, has perfect elevations, and
+                        isn't too rigid
+                    </p>
+                    <img
+                        class="h-32 ml-auto"
+                        src="./images/arrow-1.png"
+                        alt="arrow1"
+                    />
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
